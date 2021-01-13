@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="testview.dorito.MainActivity">
+
+    <SeekBar
+        android:id="@+id/speed_bar"
+        android:layout_width="334dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="24dp"
+        android:progress="40"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/follow_btn" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/destAdd_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="Destination Address"
+        app:layout_constraintBottom_toTopOf="@+id/destPort_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userID_input" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/destPort_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:hint="Destination Port"
+        app:layout_constraintBottom_toTopOf="@+id/save_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destAdd_input" />
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="407dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="35dp"
+        android:onClick="saveButton_onClick"
+        android:text="save"
+        app:layout_constraintBottom_toTopOf="@+id/follow_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destPort_input" />
+
+    <ToggleButton
+        android:id="@+id/follow_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="21dp"
+        android:text="Follow Me"
+        android:textOn="ON"
+        app:layout_constraintBottom_toTopOf="@+id/speed_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/save_btn" />
+
+    <Button
+        android:id="@+id/exit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="29dp"
+        android:onClick="exitButton_onClick"
+        android:text="Exit"
+        app:layout_constraintBottom_toTopOf="@+id/userID_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/userID_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:hint="User ID"
+        app:layout_constraintBottom_toTopOf="@+id/destAdd_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exit_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
